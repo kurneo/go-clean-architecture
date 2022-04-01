@@ -1,0 +1,10 @@
+tmp/*
+
+.idea
+migrations/.env
+
+.env
+
+./vendor
+
+./docker/.env
