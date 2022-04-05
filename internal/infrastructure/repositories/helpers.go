@@ -69,14 +69,3 @@ func applyPaginate(paginate *Paginate, query *gorm.DB) {
 	}
 }
 
-func removeEmptyFields(inputs map[string]interface{}) map[string]interface{} {
-	data := map[string]interface{}{}
-
-	for key, value := range inputs {
-		if value != "" {
-			data[key] = value
-		}
-	}
-
-	return data
-}

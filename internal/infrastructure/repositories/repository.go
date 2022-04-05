@@ -117,7 +117,7 @@ func (repository *Repository[T]) Store(data map[string]interface{}) (*T, error) 
 }
 
 func (repository *Repository[T]) Update(model *T, data map[string]interface{}) (bool, error) {
-	if e := repository.DB.Model(model).Updates(removeEmptyFields(data)).Error; e != nil {
+	if e := repository.DB.Model(model).Updates(data).Error; e != nil {
 		return false, e
 	}
 	return true, nil

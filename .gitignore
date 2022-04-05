@@ -5,6 +5,6 @@ migrations/.env
 
 .env
 
-./vendor
+vendor/*
 
 ./docker/.env
